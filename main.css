@@ -11,11 +11,12 @@ body {
     "top top top"
     ". header ."
     "nav nav nav"
+    "crumbs crumbs crumbs"
     ". main ."
     "footer footer footer";
 
   grid-template-columns: 1fr 1200px 1fr;
-  grid-template-rows: 33px 97px 54px 1fr 100px;
+  grid-template-rows: 33px 100px 55px 35px 1fr 100px;
 }
 
 #top{
@@ -31,7 +32,9 @@ body {
   grid-area: nav;
 }
 
-
+#breadcrumbs{
+  grid-area: crumbs;
+}
 #main {
   grid-area: main;
 }
@@ -45,6 +48,15 @@ body {
   height: 100%;
 }
 
+main{
+  padding-top: 30px; 
+}
+
+.main-content{
+  width: 1150px;
+  margin: 0 auto;
+}
+
 .top{
   border-bottom: 1px solid #bbb;
 }
@@ -54,8 +66,7 @@ body {
   flex-direction: row;
   align-items: center;
   height: 33px;
-  font-size: 14px;
-  
+  font-size: 14px;  
 }
 
 .top-nav-item {
@@ -138,24 +149,25 @@ body {
 .nav{
   border-top : 1px solid #bbb;
   border-bottom : 1px solid #bbb;
-
 }
+
 .navbar{
   display: flex; 
   height: 100%;
-
 }
 
-.nav-item{
+.nav-item{  
   display: flex;
   border-left: 1px solid #bbb;
   text-align: center; 
   align-items: center;    
   padding: 0 20px;
 }
+.nav-item:first-child{
+  background-color: #ccc;
+}
 
-
-.nav-item__first{
+.nav-item__double{
   display: flex;
   flex-direction: column;
 }
@@ -163,10 +175,56 @@ body {
   font-weight: 900;
 }
 
-.nav-item__last{
-  display: flex;
-  padding: 0 20px;
-  border-right: 1px solid #bbb;
-  border-left: 1px solid #bbb;
-  align-items: center; 
+.nav-item:last-child{
+  border-right: 1px solid #bbb; 
 }
+
+.nav-item__active{
+  background-color: #db055b;
+}
+
+.breadcrumbs{
+  border-bottom: 1px solid #bbb;  
+}
+
+.crumbs{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  font-size: 12px;
+}
+
+.cramb{
+  padding: 0 5px; 
+}
+
+.cramb:after{
+  content: ">";
+  padding-left: 10px;
+}
+
+.cramb:last-child::after{
+  content: "";
+}
+
+
+.h1-title{
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.pagination-number{
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-right: 13px;  
+  font-weight: 700;
+}
+
+.pagination-number__active{
+  background-color: #db055b;
+}
+
