@@ -1,99 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-  </head>
-  <body id="grid-container">
-    <div id="header-left">  </div>
-    <div id="header-right">  </div>
-    <header id="header">        
-      <nav class="header-topnav">
-        <p class="header-topnav-item">О компании</p>
-        <p class="header-topnav-item">Доставка</p>
-        <p class="header-topnav-item">Оплата</p>
-        <p class="header-topnav-item">Сервис</p>
-        <p class="header-topnav-item">Возврат</p>
-        <p class="header-topnav-item">Статьи</p>
-        <p class="header-topnav-item">Контакты</p>
-      </nav>
-      <div class="header-main">
-        <div class="logo">
-          <img
-            src="./images/logo-electroprestige.png"
-            alt="электропрестиж"
-            class="logo-item"
-          />
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+
+<body id="grid-container">
+
+  <nav class="top" id="top">
+    <div class="wrapper">
+      <div class="top-nav">
+        <p class="top-nav-item">О компании</p>
+        <p class="top-nav-item">Доставка</p>
+        <p class="top-nav-item">Оплата</p>
+        <p class="top-nav-item">Сервис</p>
+        <p class="top-nav-item">Возврат</p>
+        <p class="top-nav-item">Статьи</p>
+        <p class="top-nav-item">Контакты</p>
+      </div>
+    </div>
+  </nav>
+
+
+  <header id="header">
+
+    <div class="header-main">
+      <div class="logo">
+        <img src="./images/logo-electroprestige.png" alt="электропрестиж" class="logo-item" />
+      </div>
+      <div class="search">
+        <div class="search-logo">
+          <img src="./images/search-logo.png" alt="search-logo" class="search-logo-item" />
         </div>
-        <div class="search">
-          <div class="search-logo">
-            <img
-              src="./images/search-logo.png"
-              alt="search-logo"
-              class="search-logo-item"
-            />
-          </div>
-          <div class="search-input">
-            <input
-              class="search-input-item"
-              type="text"
-              placeholder="Поиск по товарам"
-            />
-          </div>
-          <div class="search-button">
-            <button class="search-button-item">
-              <img src="./images/search-button.png" alt="search-button" />
-            </button>
-          </div>
+        <div class="search-input">
+          <input class="search-input-item" type="text" placeholder="Поиск по товарам" />
         </div>
-        <div class="contacts">
-          <p class="phone-number">8(800)707-99-24</p>
-          <p class="timetable">9.00 - 20.00 ежедневно</p>
-        </div>
-        <div class="shopacart">
-          <div class="shopcart-compare">
-            <div class="shopcart-compare-logo">
-              <img src="./images/shopacrt-compare-logo.png" alt="" />
-            </div>
-            <div class="shopcart-compare-number">0</div>
-          </div>
-          <div class="shopcart-like">
-            <div class="shopcart-like-logo">
-              <img src="./images/shopacrt-like-logo.png" alt="" />
-            </div>
-            <div class="shopcart-like-number">0</div>
-          </div>
-          <div class="shopacrt-basket">
-            <div class="shopacrt-basket-logo">
-              <img src="./images/shopacrt-basket-logo.png" alt="" />
-            </div>
-            <div class="shopacrt-basket-number">0</div>
-          </div>
+        <div class="search-button">
+          <button class="search-button-item">
+            <img src="./images/search-button.png" alt="search-button" />
+          </button>
         </div>
       </div>
-    </header>
-    <div id="nav-left">  </div>
-        <div id="nav-right">  </div>
-    <nav class="navbar" id="nav">
-      <div class="nav-item__first">Продукция<span class="nav-item__bold">Энерготех</span></div>
-      <div class="nav-item">Стабилизаторы 220В</div>
-      <div class="nav-item">Стабилизаторы 380В</div>
-      <div class="nav-item">Генераторы 220В</div>
-      <div class="nav-item">Генераторы 380В</div>
-      <div class="nav-item">ИБП и батареи</div>
-      <div class="nav-item">Прочая техника</div>
-      <div class="nav-item">Услуги</div>
-      <div class="nav-item">Акции</div>
-    </nav>
-    <main id="main"></main>
-    <footer id="footer"></footer>
-  </body>
+      <div class="contacts">
+        <p class="phone-number">8(800)707-99-24</p>
+        <p class="timetable">9.00 - 20.00 ежедневно</p>
+      </div>
+      <div class="shopacart">
+        <div class="shopcart-compare">
+          <div class="shopcart-compare-logo">
+            <img src="./images/shopacrt-compare-logo.png" alt="" />
+          </div>
+          <div class="shopcart-compare-number">0</div>
+        </div>
+        <div class="shopcart-like">
+          <div class="shopcart-like-logo">
+            <img src="./images/shopacrt-like-logo.png" alt="" />
+          </div>
+          <div class="shopcart-like-number">0</div>
+        </div>
+        <div class="shopacrt-basket">
+          <div class="shopacrt-basket-logo">
+            <img src="./images/shopacrt-basket-logo.png" alt="" />
+          </div>
+          <div class="shopacrt-basket-number">0</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav" id="nav">
+    <div class="wrapper">
+    <div class="navbar">
+    <div class="nav-item"><span class="nav-item__first">Продукция<span class="nav-item__bold">Энерготех</span></span></div>
+    <div class="nav-item">Стабилизаторы 220В</div>
+    <div class="nav-item">Стабилизаторы 380В</div>
+    <div class="nav-item">Генераторы 220В</div>
+    <div class="nav-item">Генераторы 380В</div>
+    <div class="nav-item">ИБП и батареи</div>
+    <div class="nav-item">Прочая техника</div>
+    <div class="nav-item">Услуги</div>
+    <div class="nav-item__last">Акции</div>
+  </div>
+</div>
+  </nav>
+  <main id="main"></main>
+  <footer id="footer"></footer>
+</body>
+
 </html>
