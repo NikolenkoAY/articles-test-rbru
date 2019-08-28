@@ -3,7 +3,7 @@ body {
   margin: 0px;
   padding: 0px;
   height: 100vh;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans";
 }
 #grid-container {
   display: grid;
@@ -16,7 +16,7 @@ body {
     "footer footer footer";
 
   grid-template-columns: 1fr 1200px 1fr;
-  grid-template-rows: 33px 100px 55px 35px 1fr 100px;
+  grid-template-rows: 33px 100px 55px 35px 1fr minmax(170px, 1fr);
 }
 
 #top{
@@ -50,12 +50,10 @@ body {
 
 main{
   padding-top: 30px; 
+  padding-bottom: 90px;
 }
 
-.main-content{
-  width: 1150px;
-  margin: 0 auto;
-}
+
 
 .top{
   border-bottom: 1px solid #bbb;
@@ -170,6 +168,7 @@ main{
 .nav-item__double{
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .nav-item__bold{
   font-weight: 900;
@@ -198,12 +197,10 @@ main{
 .cramb{
   padding: 0 5px; 
 }
-
 .cramb:after{
   content: ">";
   padding-left: 10px;
 }
-
 .cramb:last-child::after{
   content: "";
 }
@@ -212,6 +209,11 @@ main{
 .h1-title{
   font-size: 28px;
   font-weight: 700;
+}
+
+.pagination{
+  width: 1150px;
+  margin: 0 auto;
 }
 
 .pagination-number{
@@ -228,3 +230,65 @@ main{
   background-color: #db055b;
 }
 
+
+#main-section{
+  display: grid;
+  grid-template-rows:  repeat(auto-fill, minmax(180px, 190px)) ; 
+  grid-template-columns:  minmax(560px, 1fr) minmax(560px, 1fr);
+  grid-gap: 72px 41px;
+  margin: 50px 0;
+}
+.article-preview{
+ 
+  display: flex;
+  flex-direction: row;
+}
+
+.article-preview-text{
+  padding-left: 19px;
+}
+.article-preview-title{
+  font-size: 18px;
+  font-weight: 700;
+  margin: 15px 15px 15px 0;
+}
+.article-preview-description{
+  font-size: 15px;
+  margin: 0px;  
+}
+
+.footer{
+  background-color: #dfe1e9; 
+}
+.footer  p{
+  margin: 1px;
+}
+.footer-conten{
+  font-size: 15px;
+  display: grid;
+  grid-template-rows: 100px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0 10px;
+  padding: 40px 0 30px 0;
+}
+
+
+
+.footer-navbar{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;  
+}
+
+.footer-nav-item{
+  margin: 1px; 
+}
+
+.footer-nav-privacy{
+  margin: 10px 0 0 0;
+}
