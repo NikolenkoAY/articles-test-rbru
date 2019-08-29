@@ -36,7 +36,6 @@ body {
 }
 #main {
   grid-area: main;
-  height: 100vh;
 }
 #footer {
   grid-area: footer;
@@ -76,35 +75,34 @@ main {
   align-items: center;
   height: 95px;
 }
-.search {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 45px;
-  width: 392px;
-  border: 1px solid #bbb;
-  border-radius: 8px;
+
+.search{
   margin: 0 142px 0 56px;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  max-width: 394px;
 }
-.search-logo {
-  margin: 0 17px;
-  padding: 0px;
+.search-logo{
+  position: relative;
+  left: 30px;
   height: 23px;
 }
-
-.search-input-item {
-  border: none;
+.search-input{
+  border: 1px solid #bbb;
+  border-radius: 8px;  
   font-size: 16px;
-  font-weight: 700;
-  color: #333;
+  font-weight:700;
+  color:#616167;
+  padding: 0 55px; 
+  height:50px;
+  min-width: 280px;
 }
-.search-input-item:focus {
-  outline: none;
-}
-.search-button-item {
+.search-button{
+  position: relative;
   border: none;
   background: none;
-  margin: 0 17px;
+  right: 60px;
 }
 
 .phone-number {
@@ -261,9 +259,7 @@ main {
 .footer {
   background-color: #dfe1e9;
 }
-.footer p {
-  margin: 1px;
-}
+
 .footer-conten {
   font-size: 15px;
   display: grid;
@@ -277,6 +273,18 @@ main {
   display: flex;
   flex-direction: column;
   height: inherit;
+}
+
+.footer-adress p{
+  margin: 1px;
+}
+.footer-adress-link{
+  color: #db055b;
+  font-weight: 700;
+}
+
+.footer-contacts p{
+  margin: 1px;
 }
 
 .footer-nav {
@@ -309,4 +317,8 @@ main {
 
 .footer-logo-link {
   align-self: flex-end;
+  width: 150px;
+  text-align: end;
+  text-decoration: none;
+  color: #000;
 }
