@@ -15,8 +15,9 @@ body {
     ". main ."
     "footer footer footer";
 
-  grid-template-columns: 1fr minmax(1100px, 1200px)  1fr; 
+  grid-template-columns: 1fr 1200px  1fr; 
   grid-template-rows: 33px 100px 55px 35px 1fr 170px;
+  
 }
 
 #top {
@@ -60,7 +61,7 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 33px;
+  height: 100%;
   font-size: 14px;
 }
 
@@ -73,11 +74,12 @@ main {
 .header-main {
   display: flex;
   align-items: center;
-  height: 95px;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .search{
-  margin: 0 142px 0 56px;
+  
   display: flex;  
   justify-content: center;
   align-items: center;
@@ -120,7 +122,7 @@ main {
   justify-content: space-between;
   width: 200px;
   font-weight: 700;
-  margin-left: 65px;
+
 }
 .shopcart-compare {
   display: flex;
@@ -233,8 +235,8 @@ main {
 
 #main-section {
   display: grid;
-  grid-template-rows: repeat(auto-fill, minmax(180px, 190px));
-  grid-template-columns: repeat(auto-fill, minmax(500px, 560px))  ;
+  grid-template-rows: repeat(auto-fill, 180px);
+  grid-template-columns: repeat(auto-fill, 560px);
   justify-content: center;
   grid-gap: 70px 60px;
   margin: 50px 0;
@@ -265,16 +267,18 @@ main {
 .footer-conten {
   font-size: 15px;
   display: grid;
-  grid-template-rows: 100px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0 10px;
-  padding: 40px 0 30px 0;
+  grid-template-columns: repeat(auto-fill, 280px);
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  grid-gap: 10px;
 }
 
 .footer-navbar {
   display: flex;
   flex-direction: column;
   height: inherit;
+  justify-content: center;
 }
 
 .footer-adress p{
@@ -324,3 +328,48 @@ main {
   text-decoration: none;
   color: #000;
 }
+
+@media (max-width: 1200px) {
+  #grid-container {
+    display: grid;
+    grid-template-areas:
+      ". top ."
+      ". header ."
+      ". nav ."
+      ". crumbs ."
+      ". main ."
+      ". footer .";
+  
+    grid-template-columns: 0px 1fr  0px; 
+    grid-template-rows: 33px 100px 55px 35px 1fr 1fr;
+    
+  }
+
+
+
+  .footer-conten{
+    padding: 10px 0;
+    grid-template-columns:  280px;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    
+  }
+
+  .footer-nav{
+    align-items: center;
+  }
+
+  .footer-nav{
+    align-items: start;
+  }
+
+  .footer-logo-image {
+    align-self: center;
+  }
+  
+  .footer-logo-link {
+    align-self: center;
+    width: 100%;
+    text-align: center;
+
+  }
+}    
