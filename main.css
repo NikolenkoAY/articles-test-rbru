@@ -153,6 +153,9 @@ main {
   display: flex;
   height: 100%;
 }
+.nav-btn{
+  display: none;
+}
 
 .nav-item {
   display: flex;
@@ -338,38 +341,72 @@ main {
       ". nav ."
       ". crumbs ."
       ". main ."
-      ". footer .";
-  
+      ". footer .";  
+
     grid-template-columns: 0px 1fr  0px; 
-    grid-template-rows: 33px 100px 55px 35px 1fr 1fr;
-    
+    grid-template-rows: 33px 100px 55px 35px 1fr auto;    
   }
 
+  .pagination {
+    max-width: 1024px;   
+  }
 
-
-  .footer-conten{
-    padding: 10px 0;
-    grid-template-columns:  280px;
-    grid-template-rows: repeat(auto-fill, 1fr);
-    
+  #footer{
+    padding: 20px 0;
+  }
+  .footer-conten{   
+    grid-template-columns:  280px 280px;
+    grid-template-rows: 100px 100px;
+    grid-gap: 20px;    
   }
 
   .footer-nav{
     align-items: center;
   }
-
   .footer-nav{
     align-items: start;
   }
-
   .footer-logo-image {
     align-self: center;
   }
-  
-  .footer-logo-link {
+    .footer-logo-link {
     align-self: center;
     width: 100%;
     text-align: center;
 
   }
 }    
+ 
+
+@media (max-width: 1024px){
+  #grid-container {
+    grid-template-rows: 33px auto auto 35px 1fr auto;   
+  }
+
+.header-main{
+  flex-wrap: wrap;
+  justify-content: start;
+  flex-direction: column;
+}
+
+  .logo{
+    margin: 10px;
+  }
+
+  .search{
+    margin: 10px;
+  }
+  .contacts{
+    margin: 10px;
+  }
+  .shopacart{
+    margin: 10px;
+  }
+  .navbar{
+    flex-direction: column;
+  }
+ /* .nav-btn{
+    display: block;
+  }*/
+
+}
