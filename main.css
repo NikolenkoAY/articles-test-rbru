@@ -78,8 +78,7 @@ main {
   height: 100%;
 }
 
-.search{
-  
+.search{  
   display: flex;  
   justify-content: center;
   align-items: center;
@@ -166,6 +165,11 @@ main {
 }
 .burger-button-item{
   display: none;
+  margin: 0px;
+}
+.burger{
+  height: 0px;
+  width: 0px;
 }
 
 
@@ -404,31 +408,72 @@ main {
   }
   .navbar{
     flex-direction: column;
-    
   }
-  .nav-item{
+  .nav-item {
     padding: 10px;
     justify-content: start;
-    text-align: center;
+    
     border: 1px solid #ccc;
+    display: none;
   }
+
+ 
 
   .burger-button-item{
-    display: block;
+    display: flex;
     opacity: 0;
+    z-index: 1;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    margin: 10px
+    
   }
 
-  .burger::after{
-    content: "";
-    width: 10px;
-    height: 20px;
+  .burger::after{  
+    z-index: 0;  
+    content: ""; 
     display: block;
-   z-index: 2;
     background-color: #000;
+
+    width: 30px;
+    height: 3px;
+
+    position: relative;
+    bottom: 27px;
+    left: 5px;
+    
+  }
+  .burger::before{
+    z-index: 0;  
+    content: ""; 
+    display: block;
+    background-color: #000;
+
+    width: 30px;
+    height: 3px;
+
+    position: relative;
+    bottom: 18px;
+    left: 5px;
+   
   }
     
   .burger-button-item:checked ~ .nav-item{
-    display: none;    
+    display: block;        
+  }
+
+  .burger-button-item:checked ~ .burger::after{
+    bottom: 37px;
+    background-color: #db055b;
+    transition: 500ms;
+    
+  }
+  .burger-button-item:checked ~ .burger::before{
+    bottom: 8px;
+    background-color: #db055b;
+    transition: 500ms;
+    
   }
 
   .nav-item__double {
@@ -436,7 +481,7 @@ main {
     flex-direction: row;
     justify-content: start;
     background-color: #fff;
-    
+    display: none;
   }  
   .nav-item__bold {
     margin-left: 10px;
